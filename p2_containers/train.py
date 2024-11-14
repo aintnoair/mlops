@@ -21,12 +21,16 @@ parser.add_argument("--eval_batch_size", type=int, default=32, help="Evaluation 
 parser.add_argument("--epochs", type=int, default=3, help="Number of epochs")
 parser.add_argument("--weight_decay", type=float, default=0.0, help="Weight decay")
 parser.add_argument("--warmup_steps", type=int, default=0, help="Number of warmup steps")
+parser.add_argument("--wandb_group", type=str, default="", help="Group this run is part of")
 args = parser.parse_args()
 
 # Seed everything for reproducibility
 seed_everything(42)
 
-wandb_logger = WandbLogger(project="mlops_p2_containers")
+wandb_logger = WandbLogger(
+    project="mlops_p2_containers",
+    group=args.wandb_group if args.wandb_group else None
+)
 
 # Initialize the data module
 dm = GLUEDataModule(
