@@ -5,6 +5,9 @@ The goal is to ensure a consistent environment across development and production
 project inside a Docker container. The training script uses PyTorch Lightning and WandB for logging 
 and supports flexible configuration of hyperparameters.
 
+`Disclaimer`: I developed and tested this project on an M1 Macbook Pro, results may vary when using different 
+ a different OS or x86 processor architecture.
+
 ## Project Overview
 
 This project containerizes a training pipeline for a language model, built for consistency and portability. 
