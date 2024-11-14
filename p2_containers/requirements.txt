@@ -1,0 +1,8 @@
+evaluate
+torch
+transformers
+lightning
+datasets
+wandb
+scikit-learn
+scipy

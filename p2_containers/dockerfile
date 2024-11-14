@@ -1,0 +1,18 @@
+# Start with a lightweight Python image
+FROM python:3.11-slim
+
+# Set a working directory in the container
+WORKDIR /app
+
+# Copy only the necessary files into the container
+COPY requirements.txt ./
+COPY data_module.py ./
+COPY model.py ./
+COPY train.py ./
+
+# Install dependencies from requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Define the command to run the training script with hyperparameters as arguments
+# You can adjust the defaults here or pass in command-line arguments during runtime
+ENTRYPOINT ["python", "train.py"]
