@@ -28,7 +28,7 @@ To run this project, you’ll need:
 Start by cloning this repository to your local machine:
 
 ```bash
-git clone https://github.com/your-username/p2_containers.git
+git clone https://github.com/aintnoair/mlops.git
 cd p2_containers
 ```
 
