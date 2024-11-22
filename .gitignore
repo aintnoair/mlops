@@ -1,2 +1,5 @@
 /wandb
 *.ckpt
+.idea
+.DS_Store
+/p2_containers/__pycache__
